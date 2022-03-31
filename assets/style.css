@@ -4,5 +4,79 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #F5F4F4;
+}
+
+.background-image {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar {
+    width: 100vw;
+    height: 7.5em;
+    background-color: #00303F;
+    margin-top: 0;
+
+}
+
+.navbar h1 {
+    color: white;
+    display: inline-block;
+    margin-top: 1em;
+    margin-left: 3em;
+
+}
+
+.navbar nav {
+    display: inline-block;
+    margin-left: 50em;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    font-size: 1.25em;
+    color: white;
+    margin-right: 2em;
+}
+
+.biography {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100vw;
+    height: 85vh;
+}
+
+.biography section {
+    display: inline-block;
+    margin-top: 3em;
+    margin-left: 3em;
+    width: 75vw;
+    height: 75vh;
+    background-color: #CAE4DB;
+    position: absolute;
+    z-index: 1;
+}
+
+h1 {
+    margin-top: 3em;
+    margin-left: 20em;
+}
+
+.bio-photo {
+    display: inline-block;
+    position: relative;
+    float: right;
+    z-index: 2;
+    margin-top: 6em;
+    margin-right: 6em;
+    width: 30vw;
+    height: 63vh;
+    background-color: #CDAC81;
 }
 
