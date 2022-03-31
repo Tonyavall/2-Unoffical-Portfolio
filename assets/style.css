@@ -124,14 +124,25 @@ p {
     align-items: center;
 }
 
-.project-polaroid {
-    width: 20%;
-    height: 21em;
+article.projects-content section {
+    width: 26%;
+    height: 26.5em;
     background-color: white;
 }
 
 .container {
     text-align: center;
+}
+
+/* hover over polaroid zoom */
+.project-polaroid:hover {
+    width: 32%;
+    height: 30;
+    transition: ease 300ms;
+}
+
+.project-polaroid:hover .container {
+    display: none;
 }
 
 footer {
