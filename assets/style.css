@@ -11,6 +11,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Merriweather Sans", Courier, monospace;
 }
 
+p {
+    font-size: 1.25em;
+}
+
 .background-image {
     background-image: url("");
     background-repeat: no-repeat;
@@ -35,6 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1em;
     margin-left: 3em;
     letter-spacing: 0.075em;
+    font-size: 2.25em;
 }
 
 .navbar nav {
@@ -67,14 +72,16 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
-.biography h1 {
+.biography h2 {
     margin-top: 3em;
-    margin-left: 20em;
+    margin-left: 10em;
+    font-size: 2.25em;
 }
 
 .biography p {
-    margin-top: 6em;
+    margin-top: 3em;
     margin-left: 3em;
+    width: 750px;
 }
 
 .bio-photo {
@@ -98,10 +105,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #CDAC81;
 }
 
-.projects h2 {
-    margin-top: 1.7em;
+.projects h3 {
+    margin-top: 1em;
     text-align: center;
-    color: white;
+    color: #00303F;
+    font-size: 2.25em;
 }
 
 .projects-content {
@@ -111,6 +119,19 @@ h1, h2, h3, h4, h5, h6 {
     width: 90vw;
     height: 80vh;
     background-color: #CAE4DB;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-polaroid {
+    width: 20%;
+    height: 21em;
+    background-color: white;
+}
+
+.container {
+    text-align: center;
 }
 
 footer {
@@ -118,4 +139,10 @@ footer {
     height: 7.5em;
     background-color: #00303F;
     margin-top: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+footer h4 {
+    color: white;
 }
