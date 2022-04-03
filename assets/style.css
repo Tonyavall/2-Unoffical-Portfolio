@@ -5,6 +5,9 @@ body {
     box-sizing: border-box;
     background-color: #F5F4F4;
     font-family: "Merriweather", Courier, monospace;
+
+    /*Horizontal Scrollbar on entire website bug. This is a temporary "fix". It doesn't really fix the issue it just hides it.*/
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,7 +19,7 @@ p {
 }
 
 .background-image {
-    background-image: url("");
+    background-image: url("https://i.pinimg.com/originals/dd/2f/90/dd2f905bf2b8b5156059fa935ea23b97.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -25,12 +28,41 @@ p {
     height: 100vh;
 }
 
+.socials-top {
+    margin-top: 0px;
+    float: right;
+    padding: 5px;
+}
+
+.socials-top a {
+    margin-right: 1em;
+    margin-top: .25em;
+    text-decoration: none;
+    color: white;
+    font-size: 2.25em;
+    padding: .5em;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.background-image p {
+    display: inline-block;
+    margin-top: 500px;
+    margin-left: 3.75em;
+    line-height: 1.5;
+    font-size: 1.5em;
+    color: white;
+    font-style: italic;
+    font-size: 2em;
+}
+
 .navbar {
     width: 100vw;
     height: 7.5em;
     background-color: #00303F;
     margin-top: 0;
-
+    position: sticky;
+    top: 0;
+    z-index: 3;
 }
 
 .navbar h1 {
@@ -44,7 +76,7 @@ p {
 
 .navbar nav {
     display: inline-block;
-    margin-left: 50em;
+    margin-left: 57.5em;
 }
 
 .navbar nav a {
@@ -64,7 +96,7 @@ p {
 .biography section {
     display: inline-block;
     margin-top: 3em;
-    margin-left: 3em;
+    margin-left: 7em;
     width: 75vw;
     height: 78vh;
     background-color: #CAE4DB;
@@ -74,27 +106,35 @@ p {
 
 .biography h2 {
     margin-top: 3em;
-    margin-left: 10em;
+    margin-left: 12em;
     font-size: 2.25em;
 }
 
 .biography p {
     margin-top: 3em;
-    margin-left: 3em;
+    margin-left: 7em;
     width: 750px;
+    text-indent: 3em;
+    line-height: 2em;
 }
 
 .bio-photo {
-    display: inline-block;
+    display: block;
     position: relative;
     float: right;
     z-index: 2;
     margin-top: 6em;
-    margin-right: 6em;
+    margin-right: 7em;
     width: 30vw;
     height: 67vh;
-    background-color: #CDAC81;
+    background-image: url("https://media.gq.com/photos/5ad93798ceb93861adb912d8/3:2/w_2685,h_1790,c_limit/kanye-west-0814-GQ-FEKW01.01.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
     min-width: 30vw;
+    border-radius: 0px 10px 10px 0px;
+
 }
 
 .projects {
@@ -115,7 +155,6 @@ p {
 .projects-content {
     margin-right: auto;
     margin-left: auto;
-    margin-top: 0;
     width: 90vw;
     height: 80vh;
     background-color: #CAE4DB;
@@ -124,10 +163,10 @@ p {
     align-items: center;
 }
 
-article.projects-content section {
+.project-polaroid {
     width: 26%;
-    height: 26.5em;
-    background-color: white;
+    margin-top: 0;
+    background-color: #CDAC81;
 }
 
 .container {
@@ -152,8 +191,13 @@ footer {
     margin-top: 3em;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-
-footer h4 {
+/*NOTE- Can't use font-size to change the size of the text inside the icon here? */
+footer a {
+    margin-right: 2em;
+    text-decoration: none;
     color: white;
+    padding: 1em;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
