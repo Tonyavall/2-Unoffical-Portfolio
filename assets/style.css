@@ -1,13 +1,10 @@
 body {
-    width: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #F5F4F4;
     font-family: "Merriweather", Courier, monospace;
-
-    /*Horizontal Scrollbar on entire website bug. This is a temporary "fix". It doesn't really fix the issue it just hides it.*/
-    overflow-x: hidden;
+    width: 100%;
+    overflow: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,124 +21,118 @@ p {
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .socials-top {
-    margin-top: 0px;
-    float: right;
-    padding: 5px;
+    display: flex;
+    justify-content: right;
+    padding-top: 1em;
 }
 
 .socials-top a {
-    margin-right: 1em;
-    margin-top: .25em;
     text-decoration: none;
     color: white;
     font-size: 2.25em;
     padding: .5em;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin: 0em .5em 0em .5em;
 }
 
 .background-image p {
-    display: inline-block;
-    margin-top: 500px;
-    margin-left: 3.75em;
     line-height: 1.5;
     font-size: 1.5em;
     color: white;
     font-style: italic;
     font-size: 2em;
+    margin: 0em 0em 3em 1em;
 }
 
 .navbar {
-    width: 100vw;
-    height: 7.5em;
     background-color: #00303F;
-    margin-top: 0;
     position: sticky;
     top: 0;
     z-index: 3;
+    height: 7.5em;
+    width: 100vw;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
 }
 
 .navbar h1 {
     color: white;
-    display: inline-block;
-    margin-top: 1em;
-    margin-left: 3em;
+    padding: 1em;
     letter-spacing: 0.075em;
     font-size: 2.25em;
+    margin-left: 1em;
 }
 
 .navbar nav {
-    display: inline-block;
-    margin-left: 57.5em;
+    background-color: #00303F;
+    padding: 2em;
+    margin-right: 1em;
 }
 
 .navbar nav a {
     text-decoration: none;
-    font-size: 1.25em;
     color: white;
-    margin-right: 2em;
+    margin: 2em;
 }
 
 .biography {
-    margin-top: 0;
-    margin-left: 0;
-    width: 100vw;
     height: 90vh;
+    display: flex;
+    position: relative;
+    padding: 2em;
 }
 
 .biography section {
-    display: inline-block;
-    margin-top: 3em;
-    margin-left: 7em;
-    width: 75vw;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
     height: 78vh;
+    width: 85vw;
     background-color: #CAE4DB;
     position: absolute;
     z-index: 1;
+    overflow: auto;
+    padding: 0em 6em;
 }
 
 .biography h2 {
-    margin-top: 3em;
-    margin-left: 12em;
+    font-size: 2.25em;
     font-size: 2.25em;
 }
 
 .biography p {
-    margin-top: 3em;
-    margin-left: 7em;
-    width: 750px;
+    max-width: 750px;
     text-indent: 3em;
     line-height: 2em;
 }
 
-.bio-photo {
-    display: block;
-    position: relative;
-    float: right;
+#bio-photo {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    margin-left: 60vw;
     z-index: 2;
-    margin-top: 6em;
-    margin-right: 7em;
-    width: 30vw;
-    height: 67vh;
-    background-image: url("https://media.gq.com/photos/5ad93798ceb93861adb912d8/3:2/w_2685,h_1790,c_limit/kanye-west-0814-GQ-FEKW01.01.jpg");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
-    min-width: 30vw;
-    border-radius: 0px 10px 10px 0px;
-
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
 }
 
 .projects {
     display: flex;
     justify-content: center;
-    width: 100vw;
     height: 7.5em;
+    width: 100vw;
     background-color: #CDAC81;
 }
 
@@ -164,7 +155,7 @@ p {
 }
 
 .project-polaroid {
-    width: 26%;
+    width: 26vw;
     margin-top: 0;
     background-color: #CDAC81;
 }
@@ -175,7 +166,7 @@ p {
 
 /* hover over polaroid zoom */
 .project-polaroid:hover {
-    width: 32%;
+    width: 32vw;
     height: 30;
     transition: ease 300ms;
 }
@@ -185,8 +176,8 @@ p {
 }
 
 footer {
-    width: 100vw;
     height: 7.5em;
+    width: 100vw;
     background-color: #00303F;
     margin-top: 3em;
     display: flex;
@@ -200,4 +191,30 @@ footer a {
     color: white;
     padding: 1em;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+@media screen and (max-width: 768px) {
+    header,
+    .socials-top {
+        justify-content: center;
+    }
+    .background-image p {
+        display: none;
+    }
+    .navbar {
+        justify-content: center;
+    }
+    .navbar h1 {
+        display: none;
+    }
+    .projects-content {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    header,
+    #bio-photo {
+        display: none;
+    }
 }
