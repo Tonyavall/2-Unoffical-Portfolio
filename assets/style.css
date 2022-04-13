@@ -146,7 +146,8 @@ p {
     margin-right: auto;
     margin-left: auto;
     width: 90vw;
-    height: 80vh;
+    height: 100vh;
+    max-width: 100%;
     background-color: #CAE4DB;
     display: flex;
     justify-content: space-around;
@@ -209,6 +210,9 @@ footer a {
     }
     .projects-content {
         flex-direction: column;
+    }
+    .container {
+        display: none;
     }
 }
 
